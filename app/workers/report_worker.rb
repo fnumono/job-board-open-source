@@ -1,8 +1,8 @@
 class ReportWorker
-	include Sidekiq::ReportWorker
-	sidekiq_options retry:false
+	#include Sidekiq::ReportWorker
+	#sidekiq_options retry:false
 
-	def perform()
-		puts "sidekiq is running now"
-	end
+	#def perform()
+	#	puts "sidekiq is running now"
+	#end
 end
