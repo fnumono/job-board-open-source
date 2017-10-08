@@ -45,6 +45,11 @@ class JobsController < ApplicationController
 		end
 	end
 
+	def report
+		ReportWorker.perform_async()
+		render text: "processing the report now"
+	end
+
 	private
 
 	def jobs_params
