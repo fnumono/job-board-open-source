@@ -1,16 +1,20 @@
 class Job < ApplicationRecord
 	belongs_to :category
 
+	scope :All, ->{
+		
+	}
+
 	scope :Fulltime, ->{
-		where(:category => 4)
+		where(:category => 1)
 	}
 
 	scope :Partime, ->{
-		where(:category => 5)
+		where(:category => 2)
 	}
 
 	scope :Freelance, ->{
-		where(:category => 6)
+		where(:category => 3)
 	} 
 
 end

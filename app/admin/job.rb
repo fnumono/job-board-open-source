@@ -2,6 +2,7 @@ ActiveAdmin.register Job do
 
 permit_params :title, :description, :company, :category_id
 
+scope :All
 scope :Fulltime
 scope :Partime
 scope :Freelance

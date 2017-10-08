@@ -11,7 +11,7 @@ ActiveAdmin.register_page "Dashboard" do
       columns do 
         column do 
             panel "Recent Jobs" do 
-                table_for Job.order("title desc").limit(5) do 
+                table_for Job.order("title desc").limit(200) do 
                     column :title do |job|
                         link_to job.title, [:admin, job]
                     end
